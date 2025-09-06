@@ -6,7 +6,7 @@ function reducer(state, action) {
   console.log(state, action);
   switch (action.type) {
     case "INCREMENT":
-      return {...state, count:  state.count + state.step};
+      return {...state, count: state.count + state.step};
     case "DECREMENT":
       return {...state, count: state.count - state.step};
     case 'SET_COUNT':
@@ -15,8 +15,8 @@ function reducer(state, action) {
       return {...state, step: action.payload};
     case 'RESET':
       return initialState;
-      default:
-        throw new Error(`Unhandled action type ${action.type}`);
+    default:
+      throw new Error(`Unhandled action type ${action.type}`);
   }
 }
 
@@ -30,10 +30,10 @@ function DateCounter() {
   date.setDate(date.getDate() + count);
 
   const dec = function () {
-    dispatch({ type:'DECREMENT'});
+    dispatch({type: 'DECREMENT'});
   };
   const inc = function () {
-    dispatch({ type:'INCREMENT'});
+    dispatch({type: 'INCREMENT'});
   };
 
   const defineCount = function (e) {
@@ -63,7 +63,7 @@ function DateCounter() {
 
       <div>
         <button onClick={dec}>-</button>
-        <input value={count} onChange={defineCount} />
+        <input value={count} onChange={defineCount}/>
         <button onClick={inc}>+</button>
       </div>
 
@@ -75,4 +75,5 @@ function DateCounter() {
     </div>
   );
 }
+
 export default DateCounter;

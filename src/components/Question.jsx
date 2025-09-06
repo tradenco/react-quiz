@@ -1,11 +1,11 @@
 import React from 'react';
 
 const Question = () => {
-    return (
-        <div>
-            questions
-        </div>
-    );
+  return (
+    <div>
+      questions
+    </div>
+  );
 };
 
 export default Question;
